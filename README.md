@@ -1,1 +1,88 @@
-# Brotato
+# Brotato (Python & Pygame-CE Port)
+
+A data-driven, clean-room Python + Pygame-CE implementation of **Brotato** featuring 60+ FPS performance via spatial hashing, exact game mechanics and formulas, Waves 1–20 + Endless Mode, Danger 0–5, 12 distinct characters, 27 weapons (Tiers I–IV), 38 items, weapon class synergies, and drop-in custom asset pack support.
+
+---
+
+## Quick Start
+
+```bash
+python3 -m venv .venv
+source .venv/bin/activate        # On Windows: .venv\Scripts\activate
+pip install -r requirements.txt
+python main.py
+```
+
+### CLI Options
+```bash
+python main.py --width 1280 --height 720 --fps 60
+python main.py --headless-smoke
+```
+
+---
+
+## Controls
+
+| Action | Input |
+| :--- | :--- |
+| Move | `WASD` or `Arrow Keys` |
+| Aim Mode Toggle (Auto-Aim / Manual Mouse) | `M` (or top-right HUD button) |
+| Sound Mute Toggle | `N` |
+| Pause / Resume | `ESC` |
+| Performance & Entity Debug HUD | `F3` |
+| Shop / Level-Up Shortcuts | Mouse click, or `1-4` (upgrades), `R` (reroll), `Enter`/`Space` (Go!) |
+
+---
+
+## Implemented Systems & Exact Mechanics
+
+- **Full 20-Wave Run + Endless Mode + Danger 0–5**:
+  - Escalating wave timers (20s Wave 1 up to 60s Waves 11–19, 90s Boss Wave 20), Horde/Swarm waves, Rare Loot Aliens, Elite mini-bosses, and Wave 20 Bosses (*The Predator* & *The Watcher*, with Double Boss on Danger 5).
+  - Endless Mode continuation after clearing Wave 20.
+  - Telegraphed `X` spawn markers and Charger/Boss dash warning lanes.
+- **Exact Stat & Combat Formulas**:
+  - **Armor**: Damage multiplier `15 / (15 + Armor)` (`15 Armor = 50% DR`, negative armor increases damage taken).
+  - **Dodge**: Capped at `60%` by default (`90%` for *Ghost*).
+  - **HP Regeneration**: `0.20 + (HP_Regen - 1) * (0.8 / 9.0)` HP/sec.
+  - **XP Curve**: `(Level + 3)^2` per level; banked level-ups and loot crates resolve cleanly between waves.
+  - **Material Bag**: Uncollected materials left on the floor at wave end carry over into the bag and double material drops on the next wave until drained.
+  - **Weapon Range & Scaling**: Melee weapons receive `+50%` of the Range stat; Ranged weapons receive `+100%`; per-weapon stat scaling ratios (`Melee`, `Ranged`, `Elemental`, `Engineering`, `Max HP`, `Attack Speed`).
+- **12 Distinct Characters**:
+  - *Well Rounded*, *Brawler*, *Crazy*, *Ranger*, *Mage*, *Chunky*, *Engineer*, *Ghost*, *One-Armed* (1 weapon slot, +200% Attack Speed), *Multitasker* (12 weapon slots), *Loud*, *Lucky*.
+- **27 Weapons & 12 Weapon Class Synergies**:
+  - Melee thrust & sweep arcs (`Knife`, `Lightning Shiv`, `Spear`, `Stick`, `Sword`, `Chopper`, `Fist`, `Claw`, `Scissors`, `Ghost Flint`, `Ghost Axe`, `Wrench`, `Screwdriver`, `Pruner`, `Plank`, `Torch`, `Rock`).
+  - Ranged projectiles, pellets, bounces, pierces, explosions, burn, and slow (`Pistol`, `SMG`, `Double Barrel Shotgun`, `Slingshot`, `Crossbow`, `Laser Gun`, `Rocket Launcher`, `Wand`, `Taser`, `Ghost Scepter`).
+  - Engineering structures (Wrench turrets & Screwdriver landmines).
+  - Shop **Combine** (`Tier I -> II -> III -> IV`, including auto-combining when buying into a full loadout) and **Recycle**.
+- **38 Tiered Items (Common → Legendary)** with authentic stat tradeoffs, unique item caps, and special triggers (*Piggy Bank*, *Tardigrade*, *Ricochet*, *Bandana*, *Giant Belt*, *Crown*, *Vigilante Ring*, *Fairy*, *Scared Sausage*, *Snake*, *Baby Elephant*, *Cyberball*, *Power Generator*, etc.).
+
+---
+
+## Performance Architecture
+
+- **`SpatialHashGrid` (`src/brotato/spatial_grid.py`)**: `O(1)` spatial cell indexing for enemy separation, weapon auto-aim, melee sweep/thrust queries, projectile collision, explosion AoE, and pickup magnetism.
+- **Zero-Allocation Render Caches**: Pre-rendered procedural sprites, quantized angle rotation cache for weapons, and cached text surfaces (`freesansbold.ttf` bundled in Pygame-CE).
+- **Fixed-Timestep Decoupled Engine**: Pure simulation in `src/brotato/engine/` separated from rendering in `src/brotato/ui/` (runs at >500 combined simulation + render FPS in headless benchmarks).
+
+---
+
+## Data-Driven Modding & Custom Asset Packs
+
+All game definitions live in editable JSON files under `data/`:
+- `data/characters.json`
+- `data/weapons.json`
+- `data/weapon_classes.json`
+- `data/items.json`
+- `data/enemies.json`
+- `data/waves.json`
+- `data/stats_meta.json`
+
+To swap in your own local PNG sprites, WAV/OGG sound effects, or TTF fonts without touching code, drop files into `assets/` following `assets/README_ASSETS.md`.
+
+---
+
+## Running Tests
+
+```bash
+pytest -v
+```

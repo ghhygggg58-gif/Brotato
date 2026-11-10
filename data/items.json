@@ -1,0 +1,394 @@
+[
+  {
+    "id": "tree",
+    "name": "Tree",
+    "tier": 1,
+    "price": 14,
+    "max_count": null,
+    "stats": {"trees": 1},
+    "tags": ["harvesting", "luck"],
+    "description": "More trees spawn each wave (+1 Tree)."
+  },
+  {
+    "id": "lemonade",
+    "name": "Lemonade",
+    "tier": 1,
+    "price": 18,
+    "max_count": null,
+    "stats": {"max_hp": 3, "consumable_heal": 1},
+    "tags": ["max_hp"],
+    "description": "Refreshing boost to health and fruit healing."
+  },
+  {
+    "id": "weird_food",
+    "name": "Weird Food",
+    "tier": 1,
+    "price": 18,
+    "max_count": null,
+    "stats": {"consumable_heal": 2, "dodge": -2},
+    "tags": ["hp_regen"],
+    "description": "+2 HP recovered from consumables, -2% Dodge."
+  },
+  {
+    "id": "glasses",
+    "name": "Glasses",
+    "tier": 1,
+    "price": 18,
+    "max_count": null,
+    "stats": {"range": 20},
+    "tags": ["range"],
+    "description": "+20 Range."
+  },
+  {
+    "id": "coffee",
+    "name": "Coffee",
+    "tier": 1,
+    "price": 22,
+    "max_count": null,
+    "stats": {"attack_speed": 10, "damage_pct": -2},
+    "tags": ["attack_speed"],
+    "description": "+10% Attack Speed, -2% Damage."
+  },
+  {
+    "id": "beanie",
+    "name": "Beanie",
+    "tier": 1,
+    "price": 20,
+    "max_count": null,
+    "stats": {"speed": 4, "range": -6},
+    "tags": ["speed"],
+    "description": "+4% Speed, -6 Range."
+  },
+  {
+    "id": "fertilizer",
+    "name": "Fertilizer",
+    "tier": 1,
+    "price": 16,
+    "max_count": null,
+    "stats": {"harvesting": 8, "melee_damage": -1},
+    "tags": ["harvesting"],
+    "description": "+8 Harvesting, -1 Melee Damage."
+  },
+  {
+    "id": "mushroom",
+    "name": "Mushroom",
+    "tier": 1,
+    "price": 18,
+    "max_count": null,
+    "stats": {"hp_regen": 2, "luck": -2},
+    "tags": ["hp_regen"],
+    "description": "+2 HP Regeneration, -2 Luck."
+  },
+  {
+    "id": "boxing_glove",
+    "name": "Boxing Glove",
+    "tier": 1,
+    "price": 16,
+    "max_count": null,
+    "stats": {"knockback": 3, "melee_damage": 1},
+    "tags": ["melee_damage"],
+    "description": "+3 Knockback, +1 Melee Damage."
+  },
+  {
+    "id": "sunglasses",
+    "name": "Sunglasses",
+    "tier": 1,
+    "price": 24,
+    "max_count": null,
+    "stats": {"crit_chance": 8, "range": -10},
+    "tags": ["crit_chance"],
+    "description": "+8% Crit Chance, -10 Range."
+  },
+  {
+    "id": "coupon",
+    "name": "Coupon",
+    "tier": 1,
+    "price": 18,
+    "max_count": 5,
+    "stats": {"items_price": -5},
+    "tags": ["economy"],
+    "description": "-5% Items Price (max 5)."
+  },
+  {
+    "id": "gentle_alien",
+    "name": "Gentle Alien",
+    "tier": 1,
+    "price": 26,
+    "max_count": null,
+    "stats": {"max_hp": 2, "damage_pct": 5, "enemies_pct": 5},
+    "tags": ["max_hp", "damage_pct"],
+    "description": "+2 Max HP, +5% Damage, +5% Enemies."
+  },
+  {
+    "id": "scar",
+    "name": "Scar",
+    "tier": 1,
+    "price": 22,
+    "max_count": null,
+    "stats": {"xp_gain": 20, "range": -8},
+    "tags": ["xp_gain"],
+    "description": "+20% XP Gain, -8 Range."
+  },
+  {
+    "id": "scared_sausage",
+    "name": "Scared Sausage",
+    "tier": 1,
+    "price": 25,
+    "max_count": 4,
+    "stats": {},
+    "special": {"burn_chance": 0.25},
+    "tags": ["elemental_damage"],
+    "description": "Your attacks have a 25% chance to inflict Burn (3 + 100% Elemental Damage)."
+  },
+  {
+    "id": "alien_tongue",
+    "name": "Alien Tongue",
+    "tier": 1,
+    "price": 18,
+    "max_count": null,
+    "stats": {"pickup_range": 30, "knockback": -1},
+    "tags": ["pickup_range"],
+    "description": "+30% Pickup Range, -1 Knockback."
+  },
+  {
+    "id": "cog",
+    "name": "Cog",
+    "tier": 1,
+    "price": 22,
+    "max_count": null,
+    "stats": {"engineering": 4, "damage_pct": -4},
+    "tags": ["engineering"],
+    "description": "+4 Engineering, -4% Damage."
+  },
+  {
+    "id": "turret",
+    "name": "Pocket Turret",
+    "tier": 1,
+    "price": 28,
+    "max_count": null,
+    "stats": {},
+    "special": {"turrets": 1},
+    "tags": ["engineering"],
+    "description": "Spawns an automatic Engineering Turret at the start of every wave."
+  },
+  {
+    "id": "lost_duck",
+    "name": "Lost Duck",
+    "tier": 1,
+    "price": 22,
+    "max_count": null,
+    "stats": {"luck": 12, "elemental_damage": -1},
+    "tags": ["luck"],
+    "description": "+12 Luck, -1 Elemental Damage."
+  },
+  {
+    "id": "metal_plate",
+    "name": "Metal Plate",
+    "tier": 2,
+    "price": 34,
+    "max_count": null,
+    "stats": {"armor": 3, "speed": -3},
+    "tags": ["armor"],
+    "description": "+3 Armor, -3% Speed."
+  },
+  {
+    "id": "compass",
+    "name": "Compass",
+    "tier": 2,
+    "price": 36,
+    "max_count": null,
+    "stats": {"speed": 5, "engineering": 3, "crit_chance": -3},
+    "tags": ["speed", "engineering"],
+    "description": "+5% Speed, +3 Engineering, -3% Crit Chance."
+  },
+  {
+    "id": "piggy_bank",
+    "name": "Piggy Bank",
+    "tier": 2,
+    "price": 32,
+    "max_count": 1,
+    "stats": {},
+    "special": {"interest_pct": 0.20},
+    "tags": ["economy"],
+    "description": "+20% of your current Materials at the start of every wave (Unique)."
+  },
+  {
+    "id": "baby_elephant",
+    "name": "Baby Elephant",
+    "tier": 2,
+    "price": 32,
+    "max_count": null,
+    "stats": {},
+    "special": {"pickup_dmg_chance": 0.25, "pickup_dmg_luck_pct": 0.25},
+    "tags": ["luck"],
+    "description": "25% chance to deal 25% of Luck as damage to a random enemy on Material pickup."
+  },
+  {
+    "id": "cyberball",
+    "name": "Cyberball",
+    "tier": 2,
+    "price": 32,
+    "max_count": null,
+    "stats": {},
+    "special": {"kill_dmg_chance": 0.25, "kill_dmg_luck_pct": 0.25},
+    "tags": ["luck"],
+    "description": "25% chance to deal 25% of Luck as damage to a random enemy when an enemy dies."
+  },
+  {
+    "id": "snake",
+    "name": "Snake",
+    "tier": 2,
+    "price": 34,
+    "max_count": 4,
+    "stats": {"speed": 2},
+    "special": {"burn_spread": 1},
+    "tags": ["elemental_damage"],
+    "description": "Burn spreads to 1 additional nearby enemy. +2% Speed."
+  },
+  {
+    "id": "banner",
+    "name": "Banner",
+    "tier": 2,
+    "price": 38,
+    "max_count": null,
+    "stats": {"range": 25, "attack_speed": 10, "life_steal": -2},
+    "tags": ["range", "attack_speed"],
+    "description": "+25 Range, +10% Attack Speed, -2% Life Steal."
+  },
+  {
+    "id": "alloy",
+    "name": "Alloy",
+    "tier": 2,
+    "price": 38,
+    "max_count": null,
+    "stats": {"melee_damage": 3, "ranged_damage": 3, "dodge": -6},
+    "tags": ["melee_damage", "ranged_damage"],
+    "description": "+3 Melee Damage, +3 Ranged Damage, -6% Dodge."
+  },
+  {
+    "id": "sniper_scope",
+    "name": "Lens",
+    "tier": 2,
+    "price": 40,
+    "max_count": null,
+    "stats": {"ranged_damage": 3, "range": 15, "speed": -3},
+    "tags": ["ranged_damage", "range"],
+    "description": "+3 Ranged Damage, +15 Range, -3% Speed."
+  },
+  {
+    "id": "blood_leech",
+    "name": "Blood Leech",
+    "tier": 2,
+    "price": 36,
+    "max_count": null,
+    "stats": {"life_steal": 3, "hp_regen": 2, "harvesting": -4},
+    "tags": ["life_steal", "hp_regen"],
+    "description": "+3% Life Steal, +2 HP Regeneration, -4 Harvesting."
+  },
+  {
+    "id": "plastic_explosive",
+    "name": "Plastic Explosive",
+    "tier": 2,
+    "price": 34,
+    "max_count": null,
+    "stats": {"explosion_size": 25, "explosion_damage": 15},
+    "tags": ["explosive"],
+    "description": "+25% Explosion Size, +15% Explosion Damage."
+  },
+  {
+    "id": "power_generator",
+    "name": "Power Generator",
+    "tier": 3,
+    "price": 62,
+    "max_count": 2,
+    "stats": {"speed": 5},
+    "special": {"speed_to_damage_pct": 1.0},
+    "tags": ["speed", "damage_pct"],
+    "description": "+1% Damage for every +1% Speed you have. +5% Speed."
+  },
+  {
+    "id": "bandana",
+    "name": "Bandana",
+    "tier": 3,
+    "price": 65,
+    "max_count": 1,
+    "stats": {"piercing": 1, "damage_pct": -10},
+    "tags": ["ranged_damage"],
+    "description": "Projectiles pierce through 1 additional target. -10% Damage (Unique)."
+  },
+  {
+    "id": "crown",
+    "name": "Crown",
+    "tier": 3,
+    "price": 68,
+    "max_count": 1,
+    "stats": {"harvesting": 10},
+    "special": {"harvesting_growth_bonus": 0.08},
+    "tags": ["harvesting"],
+    "description": "Harvesting increases by an extra +8% at the end of every wave (Unique)."
+  },
+  {
+    "id": "tardigrade",
+    "name": "Tardigrade",
+    "tier": 3,
+    "price": 56,
+    "max_count": 3,
+    "stats": {},
+    "special": {"wave_shield": 1},
+    "tags": ["armor", "dodge"],
+    "description": "Nullifies the damage of 1 hit taken per wave."
+  },
+  {
+    "id": "vigilante_ring",
+    "name": "Vigilante Ring",
+    "tier": 3,
+    "price": 72,
+    "max_count": 1,
+    "stats": {},
+    "special": {"damage_per_wave": 3},
+    "tags": ["damage_pct"],
+    "description": "+3% Damage at the end of every wave (Unique)."
+  },
+  {
+    "id": "lucky_charm",
+    "name": "Lucky Charm",
+    "tier": 3,
+    "price": 64,
+    "max_count": null,
+    "stats": {"luck": 30, "melee_damage": -2, "ranged_damage": -1},
+    "tags": ["luck"],
+    "description": "+30 Luck, -2 Melee Damage, -1 Ranged Damage."
+  },
+  {
+    "id": "ricochet",
+    "name": "Ricochet",
+    "tier": 4,
+    "price": 115,
+    "max_count": 1,
+    "stats": {"bounces": 1, "damage_pct": -20},
+    "tags": ["ranged_damage"],
+    "description": "All projectiles bounce +1 additional time. -20% Damage (Unique)."
+  },
+  {
+    "id": "giant_belt",
+    "name": "Giant Belt",
+    "tier": 4,
+    "price": 120,
+    "max_count": 1,
+    "stats": {"crit_chance": 8},
+    "special": {"crit_pct_enemy_hp": 0.10},
+    "tags": ["crit_chance"],
+    "description": "Critical hits deal +10% of the enemy's current HP as bonus damage (1% vs Bosses) (Unique)."
+  },
+  {
+    "id": "fairy",
+    "name": "Fairy",
+    "tier": 4,
+    "price": 110,
+    "max_count": 1,
+    "stats": {"hp_regen": 5},
+    "special": {"hp_regen_per_t1_item": 1},
+    "tags": ["hp_regen"],
+    "description": "+5 HP Regen, plus +1 HP Regen for every Tier I item you own (Unique)."
+  }
+]
