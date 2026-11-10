@@ -88,3 +88,30 @@ def test_download_script_zip_only_and_package_zip(tmp_path: Path) -> None:
     assert pkg_zip.is_file()
     with zipfile.ZipFile(pkg_zip, "r") as zf:
         assert "pkg/main.py" in set(zf.namelist())
+
+
+def test_linux_shortcut_creator_and_shell_syntax(tmp_path: Path) -> None:
+    # Verify bash syntax of Linux installer & launcher
+    subprocess.run(["bash", "-n", str(ROOT / "install_linux.sh")], check=True)
+    subprocess.run(["bash", "-n", str(ROOT / "play_brotato.sh")], check=True)
+
+    # Test desktop/menu/bin shortcut + icon creation into an isolated temp HOME
+    fake_home = tmp_path / "home"
+    (fake_home / "Desktop").mkdir(parents=True)
+
+    sys.path.insert(0, str(ROOT / "scripts"))
+    from create_linux_shortcut import create_shortcuts
+
+    created = create_shortcuts(ROOT, home_dir=fake_home, create_desktop=True)
+    assert created["bin"].is_file()
+    assert os.access(created["bin"], os.X_OK)
+    assert created["menu_entry"].is_file()
+    assert created["desktop_entry"].is_file()
+    assert os.access(created["desktop_entry"], os.X_OK)
+    assert created["icon"].is_file()
+
+    desktop_txt = created["desktop_entry"].read_text(encoding="utf-8")
+    assert "Name=Brotato (Python)" in desktop_txt
+    assert str(ROOT / "play_brotato.sh") in desktop_txt
+    assert str(created["icon"]) in desktop_txt
+

@@ -83,6 +83,16 @@ def parse_args() -> argparse.Namespace:
         default=None,
         help="Copy/package from a local repo directory instead of downloading from GitHub",
     )
+    parser.add_argument(
+        "--shortcut",
+        action="store_true",
+        help="Create Linux Mint / XDG Desktop and Application Menu shortcuts",
+    )
+    parser.add_argument(
+        "--fix-linux-deps",
+        action="store_true",
+        help="On Debian/Ubuntu/Linux Mint, automatically run sudo apt-get install python3-venv if venv is missing",
+    )
     return parser.parse_args()
 
 
@@ -203,10 +213,27 @@ def _venv_python(venv_dir: Path) -> Path:
     return venv_dir / "bin" / "python"
 
 
-def _setup_venv(dest: Path) -> Path:
+def _setup_venv(dest: Path, fix_linux_deps: bool = False) -> Path:
     venv_dir = dest / ".venv"
     py_exe = _venv_python(venv_dir)
     if not py_exe.exists():
+        check = subprocess.run(
+            [sys.executable, "-c", "import ensurepip, venv"],
+            capture_output=True,
+        )
+        if check.returncode != 0:
+            if os.name != "nt" and shutil.which("apt-get"):
+                if fix_linux_deps:
+                    print("Installing missing python3-venv & python3-pip via apt...")
+                    subprocess.run(["sudo", "apt-get", "update", "-qq"], check=True)
+                    subprocess.run(["sudo", "apt-get", "install", "-y", "python3-venv", "python3-pip"], check=True)
+                else:
+                    raise RuntimeError(
+                        "Python's `venv` module is not installed (common on fresh Linux Mint / Ubuntu).\n"
+                        "Run this once and re-run:\n"
+                        "  sudo apt update && sudo apt install -y python3-venv python3-pip\n"
+                        "Or pass --fix-linux-deps (or use install_linux.sh)."
+                    )
         print(f"Creating virtual environment in {venv_dir} ...")
         subprocess.run([sys.executable, "-m", "venv", str(venv_dir)], check=True)
 
@@ -244,7 +271,12 @@ def main() -> int:
 
     py_exe = Path(sys.executable)
     if not args.no_venv:
-        py_exe = _setup_venv(dest)
+        py_exe = _setup_venv(dest, fix_linux_deps=args.fix_linux_deps)
+
+    if args.shortcut and os.name != "nt":
+        shortcut_script = dest / "scripts" / "create_linux_shortcut.py"
+        if shortcut_script.is_file():
+            subprocess.run([str(py_exe), str(shortcut_script), "--game-dir", str(dest)], check=False)
 
     print("\nSetup complete!")
     print(f"Game folder: {dest}")
