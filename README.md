@@ -6,18 +6,33 @@ A data-driven, clean-room Python + Pygame-CE implementation of **Brotato** featu
 
 ## Easy Download & 1-Click Play
 
-### Option 1: Download ZIP + 1-Click Launcher (Recommended)
+### Linux Mint / Ubuntu (Stupid-Easy 1-Command Install)
+Paste this single command into **Terminal** — it automatically installs `python3-venv` if missing, downloads the game folder to `~/Games/Brotato-Python`, installs libraries, adds a **Desktop & Mint Games Menu shortcut**, and launches the game:
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/ghhygggg58-gif/Brotato/main/install_linux.sh | bash
+```
+
+**If your repository is private**, authenticate once with `gh auth login` (or set `GITHUB_TOKEN`) and run:
+
+```bash
+gh api repos/ghhygggg58-gif/Brotato/contents/install_linux.sh -H "Accept: application/vnd.github.raw" | bash
+```
+
+*(Already downloaded the ZIP? Unzip it, right-click inside the folder → **Open in Terminal**, and run `bash install_linux.sh` or `./play_brotato.sh`.)*
+
+### Option 2: Download ZIP + 1-Click Launcher (Windows / macOS / Linux)
 1. Download the game folder from GitHub (**Code → Download ZIP**, or [Direct `main.zip` link](https://github.com/ghhygggg58-gif/Brotato/archive/refs/heads/main.zip)) and unzip it.
 2. Run the launcher for your OS (auto-creates `.venv`, installs `pygame-ce` & `numpy` on first launch, and starts the game):
+   - **Linux / Mint**: Run **`./play_brotato.sh`** (or **`./play_brotato.sh --install-shortcut`** to add the Desktop & Menu icon)
    - **Windows**: Double-click **`Play_Brotato.bat`**
    - **macOS**: Double-click **`Play_Brotato.command`** (or run `./play_brotato.sh`)
-   - **Linux**: Run **`./play_brotato.sh`**
 
-### Option 2: Easy 1-Script Downloader (`download_brotato.py`)
+### Option 3: Easy 1-Script Downloader (`download_brotato.py`)
 Download just `download_brotato.py` (uses only Python's standard library) and run:
 
 ```bash
-python3 download_brotato.py --run
+python3 download_brotato.py --run --shortcut --fix-linux-deps
 ```
 
 Useful options:
@@ -26,7 +41,7 @@ Useful options:
 - Private repository support: `GITHUB_TOKEN=... python3 download_brotato.py --run` (or automatically via `gh` CLI if logged in)
 - Build a clean distribution zip from a local checkout: `python3 scripts/package_zip.py`
 
-### Option 3: Manual Python Setup
+### Option 4: Manual Python Setup
 
 ```bash
 python3 -m venv .venv
