@@ -4,7 +4,29 @@ A data-driven, clean-room Python + Pygame-CE implementation of **Brotato** featu
 
 ---
 
-## Quick Start
+## Easy Download & 1-Click Play
+
+### Option 1: Download ZIP + 1-Click Launcher (Recommended)
+1. Download the game folder from GitHub (**Code → Download ZIP**, or [Direct `main.zip` link](https://github.com/ghhygggg58-gif/Brotato/archive/refs/heads/main.zip)) and unzip it.
+2. Run the launcher for your OS (auto-creates `.venv`, installs `pygame-ce` & `numpy` on first launch, and starts the game):
+   - **Windows**: Double-click **`Play_Brotato.bat`**
+   - **macOS**: Double-click **`Play_Brotato.command`** (or run `./play_brotato.sh`)
+   - **Linux**: Run **`./play_brotato.sh`**
+
+### Option 2: Easy 1-Script Downloader (`download_brotato.py`)
+Download just `download_brotato.py` (uses only Python's standard library) and run:
+
+```bash
+python3 download_brotato.py --run
+```
+
+Useful options:
+- Save a clean standalone zip only: `python3 download_brotato.py --zip-only`
+- Choose output folder: `python3 download_brotato.py --dest ./MyBrotato`
+- Private repository support: `GITHUB_TOKEN=... python3 download_brotato.py --run` (or automatically via `gh` CLI if logged in)
+- Build a clean distribution zip from a local checkout: `python3 scripts/package_zip.py`
+
+### Option 3: Manual Python Setup
 
 ```bash
 python3 -m venv .venv

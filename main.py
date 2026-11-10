@@ -19,9 +19,38 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--width", type=int, default=1280, help="Window width (default 1280)")
     parser.add_argument("--height", type=int, default=720, help="Window height (default 720)")
     parser.add_argument("--fps", type=int, default=60, help="Target FPS (default 60)")
+    parser.add_argument("--auto-install", action="store_true", help="Automatically install missing runtime dependencies into current Python")
     parser.add_argument("--headless-smoke", action="store_true", help="Run a headless multi-screen smoke test & benchmark")
     parser.add_argument("--screenshots-dir", type=str, default="", help="Optional directory to save screenshots during --headless-smoke")
     return parser.parse_args()
+
+
+def _ensure_dependencies(auto_install: bool = False) -> bool:
+    missing = []
+    for pkg in ("pygame", "numpy"):
+        try:
+            __import__(pkg)
+        except ModuleNotFoundError:
+            missing.append("pygame-ce" if pkg == "pygame" else pkg)
+
+    if not missing:
+        return True
+
+    if auto_install:
+        import subprocess
+        print(f"Installing missing dependencies: {', '.join(missing)} ...")
+        subprocess.run([sys.executable, "-m", "pip", "install", "pygame-ce>=2.5.0", "numpy>=1.26.0"], check=True)
+        return True
+
+    print(
+        f"\n[Brotato Python] Missing libraries: {', '.join(missing)}\n"
+        "Easy ways to run:\n"
+        "  - Windows: double-click Play_Brotato.bat\n"
+        "  - macOS/Linux: run ./play_brotato.sh\n"
+        "  - Or install manually: pip install -r requirements.txt\n",
+        file=sys.stderr,
+    )
+    return False
 
 
 def run_headless_smoke(width: int, height: int, screenshots_dir: str) -> None:
@@ -104,6 +133,9 @@ def run_headless_smoke(width: int, height: int, screenshots_dir: str) -> None:
 
 def main() -> None:
     args = parse_args()
+    if not _ensure_dependencies(auto_install=args.auto_install):
+        raise SystemExit(1)
+
     if args.headless_smoke:
         run_headless_smoke(args.width, args.height, args.screenshots_dir)
         return
