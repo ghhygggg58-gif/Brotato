@@ -1,0 +1,35 @@
+{
+  "primary": [
+    {"key": "max_hp", "name": "Max HP", "is_percent": false, "higher_is_better": true, "description": "Maximum health points. +1 per level up."},
+    {"key": "hp_regen", "name": "HP Regeneration", "is_percent": false, "higher_is_better": true, "description": "HP recovered continuously over time (1 = 0.20 HP/s, 10 = 1.00 HP/s)."},
+    {"key": "life_steal", "name": "Life Steal", "is_percent": true, "higher_is_better": true, "description": "% chance to heal 1 HP when hitting an enemy with a weapon."},
+    {"key": "damage_pct", "name": "% Damage", "is_percent": true, "higher_is_better": true, "description": "Multiplies weapon attack damage."},
+    {"key": "melee_damage", "name": "Melee Damage", "is_percent": false, "higher_is_better": true, "description": "Flat damage bonus scaled into melee weapons."},
+    {"key": "ranged_damage", "name": "Ranged Damage", "is_percent": false, "higher_is_better": true, "description": "Flat damage bonus scaled into ranged weapons."},
+    {"key": "elemental_damage", "name": "Elemental Damage", "is_percent": false, "higher_is_better": true, "description": "Increases burn, lightning, and elemental weapon damage."},
+    {"key": "attack_speed", "name": "Attack Speed", "is_percent": true, "higher_is_better": true, "description": "Increases weapon firing & swinging speed."},
+    {"key": "crit_chance", "name": "Crit Chance", "is_percent": true, "higher_is_better": true, "description": "Chance for weapon attacks to deal critical damage."},
+    {"key": "engineering", "name": "Engineering", "is_percent": false, "higher_is_better": true, "description": "Increases turret and landmine damage."},
+    {"key": "range", "name": "Range", "is_percent": false, "higher_is_better": true, "description": "Increases weapon reach (+50% for melee) and projectile range."},
+    {"key": "armor", "name": "Armor", "is_percent": false, "higher_is_better": true, "description": "Reduces incoming damage by Armor / (15 + Armor)."},
+    {"key": "dodge", "name": "Dodge", "is_percent": true, "higher_is_better": true, "description": "% chance to completely evade an attack (capped at 60%)."},
+    {"key": "speed", "name": "Speed", "is_percent": true, "higher_is_better": true, "description": "Movement speed modifier."},
+    {"key": "luck", "name": "Luck", "is_percent": false, "higher_is_better": true, "description": "Improves shop/upgrade tiers, consumable drops, and crate odds."},
+    {"key": "harvesting", "name": "Harvesting", "is_percent": false, "higher_is_better": true, "description": "Materials and XP gained at the end of every wave (+5% growth/wave)."}
+  ],
+  "secondary": [
+    {"key": "consumable_heal", "name": "Consumable Heal", "is_percent": false, "higher_is_better": true, "description": "Bonus HP healed when picking up consumables (base 3 HP)."},
+    {"key": "xp_gain", "name": "XP Gain", "is_percent": true, "higher_is_better": true, "description": "Modifies experience gained from materials."},
+    {"key": "pickup_range", "name": "Pickup Range", "is_percent": true, "higher_is_better": true, "description": "Modifies material and consumable magnet radius."},
+    {"key": "items_price", "name": "Items Price", "is_percent": true, "higher_is_better": false, "description": "Modifies shop prices for items and weapons."},
+    {"key": "explosion_damage", "name": "Explosion Damage", "is_percent": true, "higher_is_better": true, "description": "Bonus damage multiplier for explosions."},
+    {"key": "explosion_size", "name": "Explosion Size", "is_percent": true, "higher_is_better": true, "description": "Increases explosion radius."},
+    {"key": "piercing", "name": "Piercing", "is_percent": false, "higher_is_better": true, "description": "Extra enemies projectiles can pass through."},
+    {"key": "bounces", "name": "Bounces", "is_percent": false, "higher_is_better": true, "description": "Extra times projectiles bounce to nearby enemies."},
+    {"key": "knockback", "name": "Knockback", "is_percent": false, "higher_is_better": true, "description": "Extra knockback force applied by weapon hits."},
+    {"key": "enemies_pct", "name": "Enemies", "is_percent": true, "higher_is_better": true, "description": "Modifies number of enemies spawned during waves."},
+    {"key": "enemy_speed_pct", "name": "Enemy Speed", "is_percent": true, "higher_is_better": false, "description": "Modifies enemy movement speed."},
+    {"key": "trees", "name": "Trees", "is_percent": false, "higher_is_better": true, "description": "Extra trees spawned each wave."},
+    {"key": "free_rerolls", "name": "Free Rerolls", "is_percent": false, "higher_is_better": true, "description": "Free shop rerolls granted at the start of each shop phase."}
+  ]
+}

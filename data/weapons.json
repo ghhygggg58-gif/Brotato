@@ -1,0 +1,447 @@
+[
+  {
+    "id": "pistol",
+    "name": "Pistol",
+    "type": "ranged",
+    "attack_style": "projectile",
+    "classes": ["gun"],
+    "min_tier": 1,
+    "scaling": {"ranged_damage": 1.0},
+    "tiers": {
+      "1": {"damage": 12, "cooldown": 1.02, "range": 400, "crit_chance": 5, "crit_mult": 2.0, "knockback": 15, "piercing": 1, "price": 15},
+      "2": {"damage": 18, "cooldown": 0.90, "range": 400, "crit_chance": 7, "crit_mult": 2.0, "knockback": 15, "piercing": 1, "price": 30},
+      "3": {"damage": 28, "cooldown": 0.78, "range": 400, "crit_chance": 10, "crit_mult": 2.0, "knockback": 15, "piercing": 1, "price": 56},
+      "4": {"damage": 45, "cooldown": 0.65, "range": 400, "crit_chance": 15, "crit_mult": 2.0, "knockback": 15, "piercing": 2, "price": 108}
+    },
+    "projectile": {"speed": 850, "radius": 6, "color": [255, 224, 120]},
+    "description": "Reliable sidearm whose bullets pierce through 1 enemy."
+  },
+  {
+    "id": "smg",
+    "name": "SMG",
+    "type": "ranged",
+    "attack_style": "projectile",
+    "classes": ["gun"],
+    "min_tier": 1,
+    "scaling": {"ranged_damage": 0.5},
+    "tiers": {
+      "1": {"damage": 3, "cooldown": 0.17, "range": 400, "crit_chance": 1, "crit_mult": 1.5, "knockback": 0, "price": 20},
+      "2": {"damage": 4, "cooldown": 0.15, "range": 400, "crit_chance": 1, "crit_mult": 1.5, "knockback": 0, "price": 40},
+      "3": {"damage": 6, "cooldown": 0.13, "range": 400, "crit_chance": 1, "crit_mult": 1.5, "knockback": 0, "price": 76},
+      "4": {"damage": 8, "cooldown": 0.11, "range": 400, "crit_chance": 1, "crit_mult": 1.5, "knockback": 0, "price": 140}
+    },
+    "projectile": {"speed": 900, "radius": 5, "spread_deg": 10, "color": [255, 195, 90]},
+    "description": "Rapid-fire submachine gun with huge synergy with flat Ranged Damage."
+  },
+  {
+    "id": "shotgun",
+    "name": "Double Barrel Shotgun",
+    "type": "ranged",
+    "attack_style": "projectile",
+    "classes": ["gun"],
+    "min_tier": 1,
+    "scaling": {"ranged_damage": 0.8},
+    "tiers": {
+      "1": {"damage": 3, "cooldown": 1.32, "range": 350, "crit_chance": 3, "crit_mult": 2.0, "knockback": 10, "pellets": 4, "piercing": 1, "price": 20},
+      "2": {"damage": 5, "cooldown": 1.18, "range": 350, "crit_chance": 3, "crit_mult": 2.0, "knockback": 10, "pellets": 5, "piercing": 2, "price": 40},
+      "3": {"damage": 8, "cooldown": 1.05, "range": 350, "crit_chance": 3, "crit_mult": 2.0, "knockback": 10, "pellets": 6, "piercing": 2, "price": 75},
+      "4": {"damage": 12, "cooldown": 0.90, "range": 350, "crit_chance": 3, "crit_mult": 2.0, "knockback": 10, "pellets": 7, "piercing": 3, "price": 135}
+    },
+    "projectile": {"speed": 820, "radius": 5, "spread_deg": 24, "color": [255, 145, 75]},
+    "description": "Fires a cone of piercing pellets with strong knockback."
+  },
+  {
+    "id": "slingshot",
+    "name": "Slingshot",
+    "type": "ranged",
+    "attack_style": "projectile",
+    "classes": ["primitive"],
+    "min_tier": 1,
+    "scaling": {"ranged_damage": 1.0},
+    "tiers": {
+      "1": {"damage": 10, "cooldown": 1.25, "range": 420, "crit_chance": 3, "crit_mult": 2.0, "knockback": 8, "bounces": 1, "price": 15},
+      "2": {"damage": 16, "cooldown": 1.12, "range": 420, "crit_chance": 3, "crit_mult": 2.0, "knockback": 8, "bounces": 2, "price": 30},
+      "3": {"damage": 24, "cooldown": 1.00, "range": 420, "crit_chance": 3, "crit_mult": 2.0, "knockback": 8, "bounces": 3, "price": 56},
+      "4": {"damage": 38, "cooldown": 0.85, "range": 420, "crit_chance": 3, "crit_mult": 2.0, "knockback": 8, "bounces": 4, "price": 108}
+    },
+    "projectile": {"speed": 740, "radius": 7, "color": [190, 175, 145]},
+    "description": "Fires pebbles that ricochet to nearby enemies."
+  },
+  {
+    "id": "crossbow",
+    "name": "Crossbow",
+    "type": "ranged",
+    "attack_style": "projectile",
+    "classes": ["precise", "primitive"],
+    "min_tier": 1,
+    "scaling": {"ranged_damage": 0.75, "range": 0.1},
+    "tiers": {
+      "1": {"damage": 12, "cooldown": 1.10, "range": 480, "crit_chance": 10, "crit_mult": 2.0, "knockback": 10, "piercing": 0, "price": 18},
+      "2": {"damage": 20, "cooldown": 1.00, "range": 500, "crit_chance": 15, "crit_mult": 2.2, "knockback": 10, "piercing": 0, "price": 36},
+      "3": {"damage": 30, "cooldown": 0.90, "range": 520, "crit_chance": 20, "crit_mult": 2.5, "knockback": 10, "piercing": 1, "price": 68},
+      "4": {"damage": 48, "cooldown": 0.80, "range": 560, "crit_chance": 25, "crit_mult": 2.75, "knockback": 10, "piercing": 1, "price": 126}
+    },
+    "projectile": {"speed": 960, "radius": 6, "color": [210, 240, 255]},
+    "special": {"crit_pierce": 1},
+    "description": "High crit multiplier; critical bolts gain +1 Pierce."
+  },
+  {
+    "id": "laser_gun",
+    "name": "Laser Gun",
+    "type": "ranged",
+    "attack_style": "projectile",
+    "classes": ["gun"],
+    "min_tier": 1,
+    "scaling": {"ranged_damage": 2.0},
+    "tiers": {
+      "1": {"damage": 20, "cooldown": 1.85, "range": 520, "crit_chance": 10, "crit_mult": 2.0, "knockback": 12, "piercing": 1, "price": 22},
+      "2": {"damage": 36, "cooldown": 1.75, "range": 520, "crit_chance": 12, "crit_mult": 2.0, "knockback": 12, "piercing": 2, "price": 44},
+      "3": {"damage": 60, "cooldown": 1.60, "range": 520, "crit_chance": 15, "crit_mult": 2.0, "knockback": 12, "piercing": 3, "price": 82},
+      "4": {"damage": 95, "cooldown": 1.45, "range": 520, "crit_chance": 20, "crit_mult": 2.25, "knockback": 12, "piercing": 4, "price": 150}
+    },
+    "projectile": {"speed": 1200, "radius": 7, "color": [90, 245, 255]},
+    "description": "Slow, devastating piercing laser beam with massive 200% Ranged Damage scaling."
+  },
+  {
+    "id": "rocket_launcher",
+    "name": "Rocket Launcher",
+    "type": "ranged",
+    "attack_style": "projectile",
+    "classes": ["heavy", "explosive"],
+    "min_tier": 2,
+    "scaling": {"ranged_damage": 1.5},
+    "tiers": {
+      "2": {"damage": 35, "cooldown": 1.75, "range": 500, "crit_chance": 3, "crit_mult": 2.0, "knockback": 35, "explosion_radius": 115, "price": 52},
+      "3": {"damage": 60, "cooldown": 1.55, "range": 500, "crit_chance": 3, "crit_mult": 2.0, "knockback": 40, "explosion_radius": 135, "price": 96},
+      "4": {"damage": 100, "cooldown": 1.35, "range": 500, "crit_chance": 3, "crit_mult": 2.0, "knockback": 45, "explosion_radius": 160, "price": 175}
+    },
+    "projectile": {"speed": 640, "radius": 10, "color": [255, 110, 60]},
+    "description": "Fires explosive rockets that blast crowds of aliens."
+  },
+  {
+    "id": "wand",
+    "name": "Wand",
+    "type": "ranged",
+    "attack_style": "projectile",
+    "classes": ["elemental"],
+    "min_tier": 1,
+    "scaling": {"elemental_damage": 1.0},
+    "tiers": {
+      "1": {"damage": 6, "cooldown": 1.10, "range": 400, "crit_chance": 3, "crit_mult": 1.5, "knockback": 0, "burn_dmg": 3, "burn_ticks": 3, "price": 14},
+      "2": {"damage": 10, "cooldown": 0.98, "range": 400, "crit_chance": 3, "crit_mult": 1.5, "knockback": 0, "burn_dmg": 5, "burn_ticks": 3, "price": 28},
+      "3": {"damage": 16, "cooldown": 0.85, "range": 400, "crit_chance": 3, "crit_mult": 1.5, "knockback": 0, "burn_dmg": 8, "burn_ticks": 4, "price": 52},
+      "4": {"damage": 26, "cooldown": 0.72, "range": 400, "crit_chance": 3, "crit_mult": 1.5, "knockback": 0, "burn_dmg": 12, "burn_ticks": 4, "price": 98}
+    },
+    "projectile": {"speed": 720, "radius": 8, "color": [255, 130, 50]},
+    "description": "Fires fireballs that ignite enemies with Elemental burn damage over time."
+  },
+  {
+    "id": "taser",
+    "name": "Taser",
+    "type": "ranged",
+    "attack_style": "projectile",
+    "classes": ["elemental", "support"],
+    "min_tier": 1,
+    "scaling": {"elemental_damage": 0.8},
+    "tiers": {
+      "1": {"damage": 6, "cooldown": 1.05, "range": 300, "crit_chance": 3, "crit_mult": 1.5, "knockback": 5, "slow_pct": 30, "pellets": 1, "price": 15},
+      "2": {"damage": 10, "cooldown": 0.96, "range": 300, "crit_chance": 3, "crit_mult": 1.5, "knockback": 5, "slow_pct": 35, "pellets": 2, "price": 30},
+      "3": {"damage": 16, "cooldown": 0.85, "range": 300, "crit_chance": 3, "crit_mult": 1.5, "knockback": 5, "slow_pct": 40, "pellets": 2, "price": 58},
+      "4": {"damage": 25, "cooldown": 0.75, "range": 300, "crit_chance": 3, "crit_mult": 1.5, "knockback": 5, "slow_pct": 45, "pellets": 3, "price": 110}
+    },
+    "projectile": {"speed": 880, "radius": 6, "spread_deg": 18, "color": [120, 210, 255]},
+    "description": "Fires electric bolts that slow enemies hit."
+  },
+  {
+    "id": "ghost_scepter",
+    "name": "Ghost Scepter",
+    "type": "ranged",
+    "attack_style": "projectile",
+    "classes": ["ethereal"],
+    "min_tier": 1,
+    "scaling": {"ranged_damage": 1.0},
+    "tiers": {
+      "1": {"damage": 10, "cooldown": 1.15, "range": 420, "crit_chance": 3, "crit_mult": 2.0, "knockback": 5, "price": 16},
+      "2": {"damage": 18, "cooldown": 1.05, "range": 420, "crit_chance": 3, "crit_mult": 2.0, "knockback": 5, "price": 32},
+      "3": {"damage": 28, "cooldown": 0.95, "range": 420, "crit_chance": 3, "crit_mult": 2.0, "knockback": 5, "price": 62},
+      "4": {"damage": 44, "cooldown": 0.85, "range": 420, "crit_chance": 3, "crit_mult": 2.0, "knockback": 5, "price": 118}
+    },
+    "projectile": {"speed": 780, "radius": 8, "color": [155, 240, 255]},
+    "special": {"kill_stat_every": {"1": 20, "2": 16, "3": 12, "4": 8}, "kill_stat": {"max_hp": 1}},
+    "description": "Gains +1 Max HP permanently for every X enemies killed with this weapon."
+  },
+  {
+    "id": "knife",
+    "name": "Knife",
+    "type": "melee",
+    "attack_style": "thrust",
+    "classes": ["precise"],
+    "min_tier": 1,
+    "scaling": {"melee_damage": 0.8},
+    "tiers": {
+      "1": {"damage": 8, "cooldown": 0.82, "range": 150, "crit_chance": 20, "crit_mult": 2.5, "knockback": 2, "price": 14},
+      "2": {"damage": 14, "cooldown": 0.76, "range": 150, "crit_chance": 25, "crit_mult": 2.75, "knockback": 2, "price": 28},
+      "3": {"damage": 22, "cooldown": 0.68, "range": 150, "crit_chance": 30, "crit_mult": 3.0, "knockback": 2, "price": 54},
+      "4": {"damage": 35, "cooldown": 0.60, "range": 150, "crit_chance": 35, "crit_mult": 3.5, "knockback": 2, "price": 102}
+    },
+    "description": "Fast thrusting blade with massive Critical Chance and Crit Multiplier."
+  },
+  {
+    "id": "lightning_shiv",
+    "name": "Lightning Shiv",
+    "type": "melee",
+    "attack_style": "thrust",
+    "classes": ["precise", "elemental"],
+    "min_tier": 1,
+    "scaling": {"melee_damage": 0.5, "elemental_damage": 0.8},
+    "tiers": {
+      "1": {"damage": 5, "cooldown": 0.88, "range": 150, "crit_chance": 10, "crit_mult": 2.0, "knockback": 2, "lightning_bolts": 2, "lightning_dmg": 8, "price": 18},
+      "2": {"damage": 9, "cooldown": 0.80, "range": 150, "crit_chance": 12, "crit_mult": 2.0, "knockback": 2, "lightning_bolts": 2, "lightning_dmg": 14, "price": 36},
+      "3": {"damage": 14, "cooldown": 0.72, "range": 150, "crit_chance": 15, "crit_mult": 2.0, "knockback": 2, "lightning_bolts": 3, "lightning_dmg": 22, "price": 68},
+      "4": {"damage": 22, "cooldown": 0.65, "range": 150, "crit_chance": 20, "crit_mult": 2.0, "knockback": 2, "lightning_bolts": 4, "lightning_dmg": 34, "price": 126}
+    },
+    "description": "Thrusting shiv that spawns lightning projectiles on every hit."
+  },
+  {
+    "id": "spear",
+    "name": "Spear",
+    "type": "melee",
+    "attack_style": "thrust",
+    "classes": ["primitive"],
+    "min_tier": 1,
+    "scaling": {"melee_damage": 1.0},
+    "tiers": {
+      "1": {"damage": 15, "cooldown": 1.25, "range": 350, "crit_chance": 3, "crit_mult": 2.0, "knockback": 8, "price": 16},
+      "2": {"damage": 25, "cooldown": 1.15, "range": 375, "crit_chance": 5, "crit_mult": 2.0, "knockback": 8, "price": 32},
+      "3": {"damage": 40, "cooldown": 1.05, "range": 400, "crit_chance": 7, "crit_mult": 2.0, "knockback": 8, "price": 62},
+      "4": {"damage": 65, "cooldown": 0.92, "range": 450, "crit_chance": 10, "crit_mult": 2.5, "knockback": 8, "price": 118}
+    },
+    "description": "Ultra-long-reach melee spear piercing everything in its thrust line."
+  },
+  {
+    "id": "stick",
+    "name": "Stick",
+    "type": "melee",
+    "attack_style": "sweep",
+    "classes": ["primitive"],
+    "min_tier": 1,
+    "scaling": {"melee_damage": 1.0},
+    "tiers": {
+      "1": {"damage": 8, "cooldown": 0.95, "range": 165, "crit_chance": 3, "crit_mult": 2.0, "knockback": 10, "stick_bonus": 4, "price": 10},
+      "2": {"damage": 12, "cooldown": 0.90, "range": 165, "crit_chance": 3, "crit_mult": 2.0, "knockback": 10, "stick_bonus": 6, "price": 20},
+      "3": {"damage": 18, "cooldown": 0.85, "range": 165, "crit_chance": 3, "crit_mult": 2.0, "knockback": 10, "stick_bonus": 9, "price": 40},
+      "4": {"damage": 28, "cooldown": 0.78, "range": 165, "crit_chance": 3, "crit_mult": 2.0, "knockback": 10, "stick_bonus": 14, "price": 78}
+    },
+    "description": "Cheap sweeping stick that deals bonus damage for every other Stick equipped."
+  },
+  {
+    "id": "sword",
+    "name": "Sword",
+    "type": "melee",
+    "attack_style": "sweep",
+    "classes": ["blade"],
+    "min_tier": 1,
+    "scaling": {"melee_damage": 1.0},
+    "tiers": {
+      "1": {"damage": 14, "cooldown": 1.02, "range": 175, "crit_chance": 10, "crit_mult": 2.0, "knockback": 10, "price": 16},
+      "2": {"damage": 24, "cooldown": 0.95, "range": 175, "crit_chance": 12, "crit_mult": 2.0, "knockback": 10, "price": 32},
+      "3": {"damage": 38, "cooldown": 0.88, "range": 175, "crit_chance": 15, "crit_mult": 2.25, "knockback": 10, "price": 62},
+      "4": {"damage": 62, "cooldown": 0.80, "range": 175, "crit_chance": 20, "crit_mult": 2.5, "knockback": 10, "price": 118}
+    },
+    "description": "Well-balanced sweeping blade with strong damage and critical potential."
+  },
+  {
+    "id": "chopper",
+    "name": "Chopper",
+    "type": "melee",
+    "attack_style": "sweep",
+    "classes": ["blade"],
+    "min_tier": 1,
+    "scaling": {"melee_damage": 0.8, "max_hp": 0.25},
+    "tiers": {
+      "1": {"damage": 6, "cooldown": 1.10, "range": 160, "crit_chance": 3, "crit_mult": 2.0, "knockback": 8, "consumable_heal_bonus": 1, "price": 15},
+      "2": {"damage": 12, "cooldown": 1.02, "range": 160, "crit_chance": 3, "crit_mult": 2.0, "knockback": 8, "consumable_heal_bonus": 2, "price": 30},
+      "3": {"damage": 20, "cooldown": 0.94, "range": 160, "crit_chance": 3, "crit_mult": 2.0, "knockback": 8, "consumable_heal_bonus": 3, "price": 56},
+      "4": {"damage": 32, "cooldown": 0.85, "range": 160, "crit_chance": 3, "crit_mult": 2.0, "knockback": 8, "consumable_heal_bonus": 5, "price": 108}
+    },
+    "description": "Cleaver that scales with your Max HP and boosts Consumable Healing."
+  },
+  {
+    "id": "fist",
+    "name": "Fist",
+    "type": "melee",
+    "attack_style": "thrust",
+    "classes": ["unarmed"],
+    "min_tier": 1,
+    "scaling": {"melee_damage": 1.0},
+    "tiers": {
+      "1": {"damage": 8, "cooldown": 0.72, "range": 125, "crit_chance": 3, "crit_mult": 1.5, "knockback": 15, "price": 10},
+      "2": {"damage": 14, "cooldown": 0.68, "range": 125, "crit_chance": 3, "crit_mult": 1.5, "knockback": 15, "price": 22},
+      "3": {"damage": 24, "cooldown": 0.62, "range": 125, "crit_chance": 3, "crit_mult": 1.5, "knockback": 15, "price": 44},
+      "4": {"damage": 40, "cooldown": 0.56, "range": 125, "crit_chance": 3, "crit_mult": 1.5, "knockback": 15, "price": 86}
+    },
+    "description": "Fast close-range punch with heavy knockback."
+  },
+  {
+    "id": "claw",
+    "name": "Claw",
+    "type": "melee",
+    "attack_style": "sweep",
+    "classes": ["unarmed", "precise"],
+    "min_tier": 1,
+    "scaling": {"attack_speed": 0.2, "melee_damage": 0.5},
+    "tiers": {
+      "1": {"damage": 6, "cooldown": 0.78, "range": 140, "crit_chance": 15, "crit_mult": 2.0, "knockback": 5, "price": 16},
+      "2": {"damage": 11, "cooldown": 0.72, "range": 140, "crit_chance": 18, "crit_mult": 2.25, "knockback": 5, "price": 32},
+      "3": {"damage": 18, "cooldown": 0.66, "range": 140, "crit_chance": 22, "crit_mult": 2.5, "knockback": 5, "price": 62},
+      "4": {"damage": 28, "cooldown": 0.58, "range": 140, "crit_chance": 28, "crit_mult": 2.75, "knockback": 5, "price": 116}
+    },
+    "description": "Quick slashing claws whose damage scales with your Attack Speed."
+  },
+  {
+    "id": "scissors",
+    "name": "Scissors",
+    "type": "melee",
+    "attack_style": "thrust",
+    "classes": ["medical", "precise"],
+    "min_tier": 1,
+    "scaling": {"melee_damage": 0.8},
+    "tiers": {
+      "1": {"damage": 8, "cooldown": 0.90, "range": 145, "crit_chance": 10, "crit_mult": 2.0, "knockback": 2, "lifesteal_bonus": 4, "price": 16},
+      "2": {"damage": 14, "cooldown": 0.84, "range": 145, "crit_chance": 12, "crit_mult": 2.0, "knockback": 2, "lifesteal_bonus": 6, "price": 32},
+      "3": {"damage": 22, "cooldown": 0.78, "range": 145, "crit_chance": 15, "crit_mult": 2.25, "knockback": 2, "lifesteal_bonus": 8, "price": 62},
+      "4": {"damage": 35, "cooldown": 0.70, "range": 145, "crit_chance": 20, "crit_mult": 2.5, "knockback": 2, "lifesteal_bonus": 12, "price": 116}
+    },
+    "description": "Surgical blades granting bonus Life Steal."
+  },
+  {
+    "id": "ghost_flint",
+    "name": "Ghost Flint",
+    "type": "melee",
+    "attack_style": "thrust",
+    "classes": ["ethereal", "primitive"],
+    "min_tier": 1,
+    "scaling": {"melee_damage": 0.8},
+    "tiers": {
+      "1": {"damage": 8, "cooldown": 0.90, "range": 150, "crit_chance": 3, "crit_mult": 2.0, "knockback": 5, "price": 15},
+      "2": {"damage": 14, "cooldown": 0.85, "range": 150, "crit_chance": 3, "crit_mult": 2.0, "knockback": 5, "price": 30},
+      "3": {"damage": 22, "cooldown": 0.78, "range": 150, "crit_chance": 3, "crit_mult": 2.0, "knockback": 5, "price": 56},
+      "4": {"damage": 36, "cooldown": 0.70, "range": 150, "crit_chance": 3, "crit_mult": 2.0, "knockback": 5, "price": 108}
+    },
+    "special": {"kill_stat_every": {"1": 20, "2": 16, "3": 12, "4": 8}, "kill_stat": {"attack_speed": 1}},
+    "description": "Gains +1% Attack Speed permanently every X kills with this weapon."
+  },
+  {
+    "id": "ghost_axe",
+    "name": "Ghost Axe",
+    "type": "melee",
+    "attack_style": "sweep",
+    "classes": ["ethereal"],
+    "min_tier": 1,
+    "scaling": {"melee_damage": 1.0},
+    "tiers": {
+      "1": {"damage": 14, "cooldown": 1.15, "range": 180, "crit_chance": 5, "crit_mult": 2.0, "knockback": 10, "price": 16},
+      "2": {"damage": 24, "cooldown": 1.05, "range": 180, "crit_chance": 5, "crit_mult": 2.0, "knockback": 10, "price": 32},
+      "3": {"damage": 38, "cooldown": 0.96, "range": 180, "crit_chance": 5, "crit_mult": 2.0, "knockback": 10, "price": 62},
+      "4": {"damage": 60, "cooldown": 0.86, "range": 180, "crit_chance": 5, "crit_mult": 2.0, "knockback": 10, "price": 116}
+    },
+    "special": {"kill_stat_every": {"1": 20, "2": 16, "3": 12, "4": 8}, "kill_stat": {"damage_pct": 1}},
+    "description": "Gains +1% Damage permanently every X kills with this weapon."
+  },
+  {
+    "id": "wrench",
+    "name": "Wrench",
+    "type": "melee",
+    "attack_style": "sweep",
+    "classes": ["tool"],
+    "min_tier": 1,
+    "scaling": {"melee_damage": 1.0},
+    "tiers": {
+      "1": {"damage": 12, "cooldown": 1.25, "range": 150, "crit_chance": 3, "crit_mult": 1.5, "knockback": 20, "turret_tier": 1, "price": 20},
+      "2": {"damage": 20, "cooldown": 1.15, "range": 150, "crit_chance": 3, "crit_mult": 1.5, "knockback": 20, "turret_tier": 2, "price": 40},
+      "3": {"damage": 32, "cooldown": 1.05, "range": 150, "crit_chance": 3, "crit_mult": 1.5, "knockback": 20, "turret_tier": 3, "price": 76},
+      "4": {"damage": 50, "cooldown": 0.95, "range": 150, "crit_chance": 3, "crit_mult": 1.5, "knockback": 20, "turret_tier": 4, "price": 144}
+    },
+    "description": "Spawns an Engineering Turret at the start of every wave (scales with Engineering)."
+  },
+  {
+    "id": "screwdriver",
+    "name": "Screwdriver",
+    "type": "melee",
+    "attack_style": "thrust",
+    "classes": ["tool", "explosive"],
+    "min_tier": 1,
+    "scaling": {"melee_damage": 0.5, "engineering": 0.5},
+    "tiers": {
+      "1": {"damage": 8, "cooldown": 0.95, "range": 145, "crit_chance": 3, "crit_mult": 2.0, "knockback": 4, "mine_cooldown": 10.0, "mine_dmg": 14, "price": 16},
+      "2": {"damage": 14, "cooldown": 0.88, "range": 145, "crit_chance": 3, "crit_mult": 2.0, "knockback": 4, "mine_cooldown": 8.0, "mine_dmg": 22, "price": 32},
+      "3": {"damage": 22, "cooldown": 0.80, "range": 145, "crit_chance": 3, "crit_mult": 2.0, "knockback": 4, "mine_cooldown": 6.5, "mine_dmg": 34, "price": 62},
+      "4": {"damage": 35, "cooldown": 0.72, "range": 145, "crit_chance": 3, "crit_mult": 2.0, "knockback": 4, "mine_cooldown": 5.0, "mine_dmg": 52, "price": 116}
+    },
+    "description": "Periodically deploys explosive Landmines during waves (scales with Engineering)."
+  },
+  {
+    "id": "pruner",
+    "name": "Pruner",
+    "type": "melee",
+    "attack_style": "sweep",
+    "classes": ["support"],
+    "min_tier": 1,
+    "scaling": {"melee_damage": 1.0},
+    "tiers": {
+      "1": {"damage": 9, "cooldown": 1.05, "range": 150, "crit_chance": 5, "crit_mult": 2.0, "knockback": 8, "bonus_harvesting": 3, "price": 14},
+      "2": {"damage": 15, "cooldown": 0.96, "range": 150, "crit_chance": 5, "crit_mult": 2.0, "knockback": 8, "bonus_harvesting": 5, "price": 28},
+      "3": {"damage": 24, "cooldown": 0.88, "range": 150, "crit_chance": 5, "crit_mult": 2.0, "knockback": 8, "bonus_harvesting": 8, "price": 54},
+      "4": {"damage": 38, "cooldown": 0.80, "range": 150, "crit_chance": 5, "crit_mult": 2.0, "knockback": 8, "bonus_harvesting": 12, "price": 102}
+    },
+    "description": "Garden shears that grant bonus Harvesting and slice cleanly."
+  },
+  {
+    "id": "plank",
+    "name": "Plank",
+    "type": "melee",
+    "attack_style": "sweep",
+    "classes": ["explosive", "elemental"],
+    "min_tier": 1,
+    "scaling": {"melee_damage": 0.6, "elemental_damage": 0.6, "engineering": 0.6},
+    "tiers": {
+      "1": {"damage": 12, "cooldown": 1.25, "range": 170, "crit_chance": 3, "crit_mult": 2.0, "knockback": 18, "explosion_chance": 0.30, "explosion_radius": 95, "price": 18},
+      "2": {"damage": 20, "cooldown": 1.15, "range": 170, "crit_chance": 3, "crit_mult": 2.0, "knockback": 18, "explosion_chance": 0.40, "explosion_radius": 105, "price": 36},
+      "3": {"damage": 32, "cooldown": 1.05, "range": 170, "crit_chance": 3, "crit_mult": 2.0, "knockback": 18, "explosion_chance": 0.50, "explosion_radius": 115, "price": 68},
+      "4": {"damage": 52, "cooldown": 0.95, "range": 170, "crit_chance": 3, "crit_mult": 2.0, "knockback": 18, "explosion_chance": 0.65, "explosion_radius": 130, "price": 126}
+    },
+    "description": "Heavy wooden plank whose hits can trigger fiery explosions."
+  },
+  {
+    "id": "torch",
+    "name": "Torch",
+    "type": "melee",
+    "attack_style": "sweep",
+    "classes": ["primitive", "elemental"],
+    "min_tier": 1,
+    "scaling": {"melee_damage": 0.5, "elemental_damage": 1.0},
+    "tiers": {
+      "1": {"damage": 8, "cooldown": 1.10, "range": 160, "crit_chance": 3, "crit_mult": 1.5, "knockback": 20, "burn_dmg": 4, "burn_ticks": 3, "price": 13},
+      "2": {"damage": 13, "cooldown": 1.00, "range": 160, "crit_chance": 3, "crit_mult": 1.5, "knockback": 20, "burn_dmg": 7, "burn_ticks": 3, "price": 26},
+      "3": {"damage": 20, "cooldown": 0.90, "range": 160, "crit_chance": 3, "crit_mult": 1.5, "knockback": 20, "burn_dmg": 11, "burn_ticks": 4, "price": 50},
+      "4": {"damage": 32, "cooldown": 0.80, "range": 160, "crit_chance": 3, "crit_mult": 1.5, "knockback": 20, "burn_dmg": 16, "burn_ticks": 4, "price": 96}
+    },
+    "description": "Knocks back and ignites enemies with strong burning damage."
+  },
+  {
+    "id": "rock",
+    "name": "Rock",
+    "type": "melee",
+    "attack_style": "sweep",
+    "classes": ["primitive"],
+    "min_tier": 1,
+    "scaling": {"melee_damage": 1.0},
+    "tiers": {
+      "1": {"damage": 16, "cooldown": 1.28, "range": 150, "crit_chance": 3, "crit_mult": 2.0, "knockback": 20, "bonus_armor": 1, "bonus_hp": 1, "price": 15},
+      "2": {"damage": 26, "cooldown": 1.20, "range": 150, "crit_chance": 3, "crit_mult": 2.0, "knockback": 20, "bonus_armor": 2, "bonus_hp": 2, "price": 30},
+      "3": {"damage": 42, "cooldown": 1.12, "range": 150, "crit_chance": 3, "crit_mult": 2.0, "knockback": 20, "bonus_armor": 3, "bonus_hp": 3, "price": 56},
+      "4": {"damage": 68, "cooldown": 1.00, "range": 150, "crit_chance": 3, "crit_mult": 2.0, "knockback": 20, "bonus_armor": 4, "bonus_hp": 4, "price": 108}
+    },
+    "description": "Sturdy weapon granting passive Max HP and Armor while equipped."
+  }
+]

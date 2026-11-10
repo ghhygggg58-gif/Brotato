@@ -1,0 +1,256 @@
+[
+  {
+    "id": "well_rounded",
+    "name": "Well Rounded",
+    "subtitle": "Balanced survivor",
+    "description": "Reliable all-rounder with bonus HP, speed, and economy.",
+    "starting_weapons": ["pistol", "stick", "knife", "slingshot", "smg", "fist"],
+    "stats": {
+      "max_hp": 5,
+      "speed": 5,
+      "harvesting": 8
+    },
+    "effects_text": [
+      "+5 Max HP",
+      "+5% Speed",
+      "+8 Harvesting"
+    ],
+    "special": {},
+    "appearance": {"color": [214, 168, 108], "hat": "none", "eyes": "happy"}
+  },
+  {
+    "id": "brawler",
+    "name": "Brawler",
+    "subtitle": "Close-quarters scrapper",
+    "description": "Loves unarmed brawling, tough armor, and weaving past blows.",
+    "starting_weapons": ["fist", "claw", "knife", "stick"],
+    "stats": {
+      "dodge": 15,
+      "armor": 2,
+      "range": -50
+    },
+    "effects_text": [
+      "+50% Attack Speed with Unarmed weapons",
+      "+15% Dodge",
+      "+2 Armor",
+      "-50 Range"
+    ],
+    "special": {
+      "attack_speed_with_tag": {"unarmed": 50}
+    },
+    "appearance": {"color": [205, 146, 98], "hat": "headband", "eyes": "fierce"}
+  },
+  {
+    "id": "crazy",
+    "name": "Crazy",
+    "subtitle": "Hyper-agile blade whirlwind",
+    "description": "Unstoppable attack speed and long-reaching precise blades, zero caution.",
+    "starting_weapons": ["knife", "lightning_shiv", "sword", "scissors"],
+    "stats": {
+      "attack_speed": 25,
+      "dodge": -30,
+      "engineering": -10
+    },
+    "effects_text": [
+      "+100 Range with Precise weapons",
+      "+25% Attack Speed",
+      "-30% Dodge",
+      "-10 Engineering"
+    ],
+    "special": {
+      "range_with_tag": {"precise": 100}
+    },
+    "appearance": {"color": [224, 152, 118], "hat": "spiky", "eyes": "crazy"}
+  },
+  {
+    "id": "ranger",
+    "name": "Ranger",
+    "subtitle": "Gun-toting marksman",
+    "description": "Cannot use melee weapons, but scales Ranged Damage explosively.",
+    "starting_weapons": ["pistol", "smg", "shotgun", "crossbow", "laser_gun"],
+    "stats": {
+      "range": 50
+    },
+    "effects_text": [
+      "+50 Range",
+      "Ranged Damage modifications are increased by 50%",
+      "Cannot equip Melee weapons",
+      "Max HP modifications are reduced by 25%"
+    ],
+    "special": {
+      "can_equip_melee": false,
+      "stat_gain_mults": {"ranged_damage": 1.5, "max_hp": 0.75}
+    },
+    "appearance": {"color": [196, 154, 102], "hat": "cowboy", "eyes": "focused"}
+  },
+  {
+    "id": "mage",
+    "name": "Mage",
+    "subtitle": "Pyromancer & stormcaller",
+    "description": "Master of burn and elemental fury; physical scaling is negated.",
+    "starting_weapons": ["wand", "taser", "lightning_shiv", "torch"],
+    "stats": {
+      "elemental_damage": 5
+    },
+    "effects_text": [
+      "+5 Elemental Damage",
+      "Elemental Damage modifications are increased by 25%",
+      "Burn spreads to 1 additional nearby enemy",
+      "Melee & Ranged Damage modifications are reduced by 100%"
+    ],
+    "special": {
+      "burn_spread": 1,
+      "stat_gain_mults": {"elemental_damage": 1.25, "melee_damage": 0.0, "ranged_damage": 0.0}
+    },
+    "appearance": {"color": [172, 134, 210], "hat": "wizard", "eyes": "glow"}
+  },
+  {
+    "id": "chunky",
+    "name": "Chunky",
+    "subtitle": "Unstoppable juggernaut",
+    "description": "Massive health pool fuels % Damage, at the cost of mobility.",
+    "starting_weapons": ["chopper", "pruner", "stick", "rock", "plank"],
+    "stats": {
+      "max_hp": 5
+    },
+    "effects_text": [
+      "+5 Max HP",
+      "Max HP modifications are increased by 25%",
+      "+1% Damage for every 10 Max HP you have",
+      "Speed modifications are reduced by 100%",
+      "Dodge modifications are reduced by 50%"
+    ],
+    "special": {
+      "hp_to_damage_pct": 0.1,
+      "stat_gain_mults": {"max_hp": 1.25, "speed": 0.0, "dodge": 0.5}
+    },
+    "appearance": {"color": [228, 178, 130], "hat": "helmet", "eyes": "calm"}
+  },
+  {
+    "id": "engineer",
+    "name": "Engineer",
+    "subtitle": "Turret & landmine architect",
+    "description": "Starts with a Turret and amplifies Engineering scaling.",
+    "starting_weapons": ["wrench", "screwdriver", "plank"],
+    "stats": {
+      "engineering": 10
+    },
+    "effects_text": [
+      "+10 Engineering",
+      "Engineering modifications are increased by 25%",
+      "Starts with 1 Engineering Turret",
+      "% Damage modifications are reduced by 50%"
+    ],
+    "special": {
+      "starting_turrets": 1,
+      "stat_gain_mults": {"engineering": 1.25, "damage_pct": 0.5}
+    },
+    "appearance": {"color": [210, 160, 96], "hat": "goggles", "eyes": "focused"}
+  },
+  {
+    "id": "ghost",
+    "name": "Ghost",
+    "subtitle": "Untouchable phantom",
+    "description": "Raises Dodge cap to 90%, hits hard with Ethereal arms, but has paper Armor.",
+    "starting_weapons": ["ghost_flint", "ghost_axe", "ghost_scepter"],
+    "stats": {
+      "dodge": 30,
+      "armor": -100
+    },
+    "effects_text": [
+      "+30% Dodge",
+      "Dodge is capped at 90% instead of 60%",
+      "+10% Damage with Ethereal weapons",
+      "-100 Armor"
+    ],
+    "special": {
+      "dodge_cap": 90,
+      "damage_with_tag": {"ethereal": 10}
+    },
+    "appearance": {"color": [185, 222, 238], "hat": "halo", "eyes": "spooky"}
+  },
+  {
+    "id": "one_armed",
+    "name": "One-Armed",
+    "subtitle": "Hyper-speed solo wielder",
+    "description": "Can only hold 1 weapon, but attacks 200% faster with doubled stat scaling.",
+    "starting_weapons": ["smg", "shotgun", "slingshot", "sword", "lightning_shiv", "ghost_axe"],
+    "stats": {
+      "attack_speed": 200
+    },
+    "effects_text": [
+      "You can only equip 1 weapon",
+      "+200% Attack Speed",
+      "% Damage modifications are increased by 100%"
+    ],
+    "special": {
+      "max_weapons": 1,
+      "stat_gain_mults": {"damage_pct": 2.0}
+    },
+    "appearance": {"color": [216, 152, 102], "hat": "bandana", "eyes": "fierce"}
+  },
+  {
+    "id": "multitasker",
+    "name": "Multitasker",
+    "subtitle": "12-weapon arsenal",
+    "description": "Can equip up to 12 weapons at once, trading -5% Damage per equipped weapon.",
+    "starting_weapons": ["stick", "pistol", "slingshot", "knife", "wrench"],
+    "stats": {
+      "damage_pct": 20
+    },
+    "effects_text": [
+      "You can equip up to 12 weapons",
+      "+20% Damage",
+      "-5% Damage for every weapon you have"
+    ],
+    "special": {
+      "max_weapons": 12,
+      "damage_per_weapon": -5
+    },
+    "appearance": {"color": [218, 174, 114], "hat": "crown", "eyes": "crazy"}
+  },
+  {
+    "id": "loud",
+    "name": "Loud",
+    "subtitle": "Swarm magnet",
+    "description": "Attracts 50% more enemies for massive XP & material income.",
+    "starting_weapons": ["smg", "shotgun", "slingshot", "ghost_axe", "spear"],
+    "stats": {
+      "damage_pct": 30,
+      "enemies_pct": 50,
+      "harvesting": -5
+    },
+    "effects_text": [
+      "+30% Damage",
+      "+50% Enemies",
+      "-3 Harvesting at the end of every wave"
+    ],
+    "special": {
+      "harvesting_per_wave": -3
+    },
+    "appearance": {"color": [232, 140, 120], "hat": "megaphone", "eyes": "fierce"}
+  },
+  {
+    "id": "lucky",
+    "name": "Lucky",
+    "subtitle": "Fortune-blessed potato",
+    "description": "Massive Luck damages enemies whenever you pick up materials.",
+    "starting_weapons": ["slingshot", "pruner", "stick", "fist", "wand"],
+    "stats": {
+      "luck": 100,
+      "attack_speed": -60
+    },
+    "effects_text": [
+      "+100 Luck",
+      "Luck modifications are increased by 25%",
+      "75% chance to deal 15% of Luck as damage to a random enemy on material pickup",
+      "-60% Attack Speed"
+    ],
+    "special": {
+      "lucky_pickup_chance": 0.75,
+      "lucky_pickup_luck_pct": 0.15,
+      "stat_gain_mults": {"luck": 1.25}
+    },
+    "appearance": {"color": [178, 212, 134], "hat": "clover", "eyes": "happy"}
+  }
+]

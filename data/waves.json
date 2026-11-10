@@ -1,0 +1,32 @@
+{
+  "danger_levels": [
+    {"level": 0, "name": "Danger 0", "description": "Standard expedition.", "hp_mult": 1.0, "dmg_mult": 1.0, "speed_mult": 1.0, "count_mult": 1.0, "elite_waves": [12, 17], "boss_count": 1},
+    {"level": 1, "name": "Danger 1", "description": "More enemies, slightly tougher.", "hp_mult": 1.10, "dmg_mult": 1.08, "speed_mult": 1.03, "count_mult": 1.08, "elite_waves": [12, 17], "boss_count": 1},
+    {"level": 2, "name": "Danger 2", "description": "+20% Enemy HP & Damage.", "hp_mult": 1.20, "dmg_mult": 1.16, "speed_mult": 1.05, "count_mult": 1.12, "elite_waves": [11, 15, 18], "boss_count": 1},
+    {"level": 3, "name": "Danger 3", "description": "More Elites & Horde pressure.", "hp_mult": 1.32, "dmg_mult": 1.24, "speed_mult": 1.08, "count_mult": 1.18, "elite_waves": [11, 14, 17], "boss_count": 1},
+    {"level": 4, "name": "Danger 4", "description": "Fierce Elites, +45% Enemy HP.", "hp_mult": 1.45, "dmg_mult": 1.34, "speed_mult": 1.12, "count_mult": 1.24, "elite_waves": [11, 14, 17, 18], "boss_count": 1},
+    {"level": 5, "name": "Danger 5", "description": "Double Bosses on Wave 20! Maximum lethality.", "hp_mult": 1.60, "dmg_mult": 1.45, "speed_mult": 1.16, "count_mult": 1.30, "elite_waves": [11, 14, 17, 18], "boss_count": 2}
+  ],
+  "waves": [
+    {"wave": 1, "duration": 20, "spawn_rate": 1.4, "max_enemies": 22, "pool": {"baby_alien": 100}, "tag": ""},
+    {"wave": 2, "duration": 25, "spawn_rate": 1.8, "max_enemies": 28, "pool": {"baby_alien": 70, "chaser": 20, "fly": 10}, "tag": ""},
+    {"wave": 3, "duration": 30, "spawn_rate": 2.2, "max_enemies": 34, "pool": {"baby_alien": 55, "chaser": 20, "fly": 15, "charger": 10}, "tag": ""},
+    {"wave": 4, "duration": 35, "spawn_rate": 2.6, "max_enemies": 42, "pool": {"baby_alien": 40, "chaser": 22, "fly": 16, "charger": 12, "spitter": 10}, "tag": ""},
+    {"wave": 5, "duration": 40, "spawn_rate": 3.0, "max_enemies": 48, "pool": {"baby_alien": 32, "chaser": 20, "fly": 16, "charger": 14, "spitter": 12, "bruiser": 6}, "tag": ""},
+    {"wave": 6, "duration": 45, "spawn_rate": 3.3, "max_enemies": 55, "pool": {"baby_alien": 28, "chaser": 22, "fly": 15, "charger": 14, "spitter": 13, "bruiser": 8}, "tag": ""},
+    {"wave": 7, "duration": 45, "spawn_rate": 3.6, "max_enemies": 62, "pool": {"baby_alien": 24, "chaser": 20, "fly": 15, "charger": 15, "spitter": 13, "bruiser": 8, "healer": 5}, "tag": ""},
+    {"wave": 8, "duration": 50, "spawn_rate": 3.9, "max_enemies": 68, "pool": {"baby_alien": 20, "chaser": 20, "fly": 15, "charger": 15, "spitter": 13, "bruiser": 9, "healer": 5, "egg": 3}, "tag": ""},
+    {"wave": 9, "duration": 55, "spawn_rate": 5.5, "max_enemies": 95, "pool": {"baby_alien": 32, "chaser": 25, "fly": 23, "charger": 12, "spitter": 8}, "tag": "HORDE"},
+    {"wave": 10, "duration": 55, "spawn_rate": 4.2, "max_enemies": 74, "pool": {"baby_alien": 18, "chaser": 18, "fly": 14, "charger": 15, "spitter": 14, "bruiser": 11, "healer": 6, "egg": 4}, "tag": ""},
+    {"wave": 11, "duration": 60, "spawn_rate": 4.4, "max_enemies": 78, "pool": {"baby_alien": 16, "chaser": 18, "fly": 14, "charger": 15, "spitter": 14, "bruiser": 12, "healer": 6, "egg": 5}, "tag": ""},
+    {"wave": 12, "duration": 60, "spawn_rate": 4.6, "max_enemies": 82, "pool": {"baby_alien": 14, "chaser": 18, "fly": 14, "charger": 16, "spitter": 14, "bruiser": 13, "healer": 6, "egg": 5}, "tag": ""},
+    {"wave": 13, "duration": 60, "spawn_rate": 4.8, "max_enemies": 86, "pool": {"baby_alien": 14, "chaser": 18, "fly": 14, "charger": 16, "spitter": 14, "bruiser": 13, "healer": 6, "egg": 5}, "tag": ""},
+    {"wave": 14, "duration": 60, "spawn_rate": 6.4, "max_enemies": 110, "pool": {"baby_alien": 26, "chaser": 24, "fly": 22, "charger": 14, "spitter": 8, "bruiser": 6}, "tag": "HORDE"},
+    {"wave": 15, "duration": 60, "spawn_rate": 5.0, "max_enemies": 90, "pool": {"baby_alien": 12, "chaser": 18, "fly": 14, "charger": 16, "spitter": 15, "bruiser": 14, "healer": 6, "egg": 5}, "tag": ""},
+    {"wave": 16, "duration": 60, "spawn_rate": 5.2, "max_enemies": 94, "pool": {"baby_alien": 10, "chaser": 18, "fly": 14, "charger": 17, "spitter": 15, "bruiser": 14, "healer": 7, "egg": 5}, "tag": ""},
+    {"wave": 17, "duration": 60, "spawn_rate": 5.5, "max_enemies": 98, "pool": {"baby_alien": 10, "chaser": 18, "fly": 14, "charger": 17, "spitter": 15, "bruiser": 14, "healer": 7, "egg": 5}, "tag": ""},
+    {"wave": 18, "duration": 60, "spawn_rate": 5.8, "max_enemies": 102, "pool": {"baby_alien": 8, "chaser": 18, "fly": 14, "charger": 17, "spitter": 16, "bruiser": 15, "healer": 7, "egg": 5}, "tag": ""},
+    {"wave": 19, "duration": 60, "spawn_rate": 6.6, "max_enemies": 115, "pool": {"baby_alien": 18, "chaser": 22, "fly": 18, "charger": 16, "spitter": 12, "bruiser": 10, "healer": 4}, "tag": "SWARM"},
+    {"wave": 20, "duration": 90, "spawn_rate": 3.5, "max_enemies": 65, "pool": {"baby_alien": 20, "chaser": 20, "fly": 15, "charger": 15, "spitter": 15, "bruiser": 15}, "tag": "BOSS"}
+  ]
+}
